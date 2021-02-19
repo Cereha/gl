@@ -1,10 +1,12 @@
 import unittest
 
+def funk(a):
+    return a[2:5]
 
 class TestListMethods(unittest.TestCase):
 
     def test_roman_tkalenko_fi_13(self):
-        self.assertEqual(len(['b']), 0)
+        self.assertEqual(len([]), 0)
         self.assertEqual(len(['a']), 1)
         self.assertEqual(len(['a', 'b']), 2)
 
@@ -12,8 +14,8 @@ class TestListMethods(unittest.TestCase):
         self.assertEqual(2, 2)
 
     def test_cut_out_element(self):
-        a=['123456789']
-        self.assertEqual(funk(a),'2345')
+        a=[1,2,3,4,5,6,7,8,9]
+        self.assertEqual(funk(a),[3,4,5])
 
 
 if __name__ == '__main__':
